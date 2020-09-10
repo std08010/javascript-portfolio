@@ -5,9 +5,19 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "NodeJS Launch",
+            "name": "NodeJS Launch (work)",
             "program": "${workspaceFolder}/hello.js",
             "runtimeExecutable": "C:/Program Files/nodejs/node",
+            "request": "launch",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "type": "pwa-node"
+        },
+        {
+            "name": "NodeJS Launch (home)",
+            "program": "${workspaceFolder}/hello.js",
+            "runtimeExecutable": "E:/nodejs/node",
             "request": "launch",
             "skipFiles": [
                 "<node_internals>/**"
