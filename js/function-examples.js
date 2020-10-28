@@ -278,4 +278,4 @@ updateContent(
   updateInnerHTML("offerEnds", offerExpires(new Date()));
 
   // Finish the immediately invoked function expression
-})();
+}());
