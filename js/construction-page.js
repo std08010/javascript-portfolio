@@ -1,5 +1,7 @@
-/* This script displays a greeting to the user based 
-upon the current time.*/
+/*
+ * This script displays a greeting to the user based
+ * upon the current time.
+ */
 
 let today = new Date(); // Create a new date object
 let hourNow = today.getHours(); //Find the current hour

@@ -1,19 +1,4 @@
 /*
- * Functions
- */
-
-// Create a function to update the content of the element whose id attribute has a value of elementID
-function updateContent(elementID, msg) {
-  var el = window.document.getElementById(elementID);
-  el.textContent = msg;
-}
-// Create a function to update the inner HTML of the element whose id attribute has a value of elementID
-function updateInnerHTML(elementID, msg) {
-  var el = document.getElementById(elementID);
-  el.innerHTML = msg;
-}
-
-/*
  * Comparison Operators
  */
 let pass = 50; // Pass mark

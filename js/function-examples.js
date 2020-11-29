@@ -1,23 +1,3 @@
-/*
- * Functions
- */
-
-// Create a function to update the content of the element whose id attribute has a value of elementID
-function updateContent(elementID, msg) {
-  var el = window.document.getElementById(elementID);
-  el.textContent = msg;
-}
-// Create a function to update the inner HTML of the element whose id attribute has a value of elementID
-function updateInnerHTML(elementID, msg) {
-  var el = document.getElementById(elementID);
-  el.innerHTML = msg;
-}
-// Create a function to update the class of the element whose id attribute has a value of elementID
-function updateClass(elementID, classValue) {
-  var el = this.document.getElementById(elementID);
-  el.className = classValue;
-}
-
 // Create a variable called msg to hold a new message
 var msg = "Sign up to receive our newsletter for 10% off!";
 
@@ -97,6 +77,8 @@ updateContent(
 
 /*
  * Browser Object Model - Window Object
+ *
+ * window object is the universal object and can be accessed with "window", "this" or nothing
  */
 // Create a variable called msg to hold a message that will be shown on the page
 let msgInfo = "<h2>browser window</h2>";

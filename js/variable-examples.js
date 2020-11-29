@@ -48,8 +48,7 @@ updateAvailabilities(inStock, shipping);
 /* Some other processing might go here and, as a result, 
 the script might need to change these values.
 Here we wait 5 seconds and then we update the variables. */
-const delay = (ms) => new Promise((res) => setTimeout(res, ms));
-const waitSomeTime = async () => {
+const waitAndUpdate = async () => {
   await delay(5000);
   console.log("Waited 5s");
 
@@ -58,7 +57,7 @@ const waitSomeTime = async () => {
 
   updateAvailabilities(inStock, shipping);
 };
-waitSomeTime();
+waitAndUpdate();
 
 function updateAvailabilities(inStockValue, shippingValue) {
   // Get the element that has an id of stock
@@ -126,20 +125,3 @@ updateContent("tiles", tilesEx);
 updateContent("subTotal2", "$" + subTotalEx);
 updateContent("shipping2", "$" + shippingEx);
 updateContent("grandTotal", "$" + grandTotalEx);
-
-/*
- * Functions
- */
-// Create a function to update the content of the element whose id attribute has a value of elementID
-function updateContent(elementID, msg) {
-  // Get the element with an id of elementID.
-  var el = window.document.getElementById(elementID);
-  // Replace the content of this element.
-  el.textContent = msg;
-}
-
-// Create a function to update the inner HTML of the element whose id attribute has a value of elementID
-function updateInnerHTML(elementID, msg) {
-  var el = document.getElementById(elementID);
-  el.innerHTML = msg;
-}

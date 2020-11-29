@@ -16,7 +16,7 @@
         },
         {
             "name": "NodeJS Launch (home)",
-            "program": "${workspaceFolder}/hello.js",
+            "program": "${workspaceFolder}/dividendScrapper.js",
             "runtimeExecutable": "E:/nodejs/node",
             "request": "launch",
             "skipFiles": [
