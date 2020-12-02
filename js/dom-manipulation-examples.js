@@ -1,4 +1,4 @@
-let timeToWait = 500;
+let timeToWait = 200;
 
 /*
  * Write all the actions inside an async method so that we can call
@@ -249,5 +249,103 @@ const waitAndExecute = async () => {
   await delay(timeToWait);
   firstItem.innerHTML =
     '<a href="http://example.org">' + showInnerHTML + "</a>";
+
+  /*
+   * Add/Remove element to/from DOM tree
+   */
+
+  await delay(timeToWait);
+  // Create a new element and store it in a variable.
+  let newEl = document.createElement("li");
+
+  // Create a text node and store it in a variable.
+  let newText = document.createTextNode("quinoa");
+
+  // Attach the new text node to the new element.
+  newEl.appendChild(newText);
+
+  // Find the position where the new element should be added.
+  let position = document.getElementsByTagName("ul")[0];
+
+  // Insert the new element into its position.
+  position.appendChild(newEl);
+
+  await delay(timeToWait);
+  let elList = document.getElementsByTagName("li");
+  if (elList.length > 4) {
+    let removeEl = elList[4];
+    let containerEl = removeEl.parentNode;
+    containerEl.removeChild(removeEl);
+  }
+
+  /*
+   * Attribute handling
+   */
+
+  firstItem = document.getElementById("one"); // Get first list item
+  // If it has class attribute
+  if (firstItem.hasAttribute("class")) {
+    let attr = firstItem.getAttribute("class"); // Get the attribute
+
+    await delay(timeToWait);
+    // Add the value of the attribute after the list
+    let el = document.getElementById("scriptResults");
+    el.innerHTML = "<p>The first item has a class name: " + attr + "</p>";
+  }
+
+  await delay(timeToWait);
+  firstItem.className = "complete"; // Change its class attribute
+
+  await delay(timeToWait);
+  let fourthItem = document.getElementsByTagName("li").item(3); // Get fourth item
+  fourthItem.setAttribute("class", "cool"); // Add an attribute to it
+
+  await delay(timeToWait);
+  firstItem.className = "hot";
+  if (fourthItem.hasAttribute("class")) {
+    await delay(timeToWait);
+    fourthItem.removeAttribute("class");
+  }
+
+  await delay(timeToWait);
+  let elScriptResults = document.getElementById("scriptResults");
+  elScriptResults.innerHTML = "";
+
+  /*
+   * Full Example
+   */
+  // ADDING ITEMS TO START AND END OF LIST
+  var list = document.getElementsByTagName("ul")[0]; // Get the <ul> element
+
+  // ADD NEW ITEM TO END OF LIST
+  var newItemLast = document.createElement("li"); // Create element
+  var newTextLast = document.createTextNode("cream"); // Create text node
+  newItemLast.appendChild(newTextLast); // Add text node to element
+  await delay(5*timeToWait);
+  list.appendChild(newItemLast); // Add element end of list
+
+  // ADD NEW ITEM START OF LIST
+  var newItemFirst = document.createElement("li"); // Create element
+  var newTextFirst = document.createTextNode("kale"); // Create text node
+  newItemFirst.appendChild(newTextFirst); // Add text node to element
+  await delay(5*timeToWait);
+  list.insertBefore(newItemFirst, list.firstChild); // Add element to list
+
+  var listItems = document.querySelectorAll("li"); // All <li> elements
+
+  // ADD A CLASS OF COOL TO ALL LIST ITEMS
+  for (let i = 0; i < listItems.length; i++) {
+    // Loop through elements
+    await delay(5*timeToWait);
+    listItems[i].className = "cool"; // Change class to cool
+  }
+
+  await delay(5*timeToWait);
+  // ADD NUMBER OF ITEMS IN THE LIST TO THE HEADING
+  var heading = document.querySelector("h2"); // h2 element
+  var headingText = heading.firstChild.nodeValue; // h2 text
+  var totalItems = listItems.length; // No. of <li> elements
+  var newHeading = headingText + "<span>" + totalItems + "</span>"; // Content
+  heading.innerHTML = newHeading; // Update h2 using innerHTML (not textContent) because it contains markup
 };
 waitAndExecute();
