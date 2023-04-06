@@ -6,23 +6,23 @@
     "configurations": [
         {
             "name": "NodeJS Launch (work)",
-            "program": "${workspaceFolder}/hello.js",
+            "program": "${workspaceFolder}/js/hello.js",
             "runtimeExecutable": "C:/Program Files/nodejs/node",
             "request": "launch",
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "type": "pwa-node"
+            "type": "node"
         },
         {
             "name": "NodeJS Launch (home)",
-            "program": "${workspaceFolder}/dividendScrapper.js",
+            "program": "${workspaceFolder}/js/hello.js",
             "runtimeExecutable": "E:/nodejs/node",
             "request": "launch",
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "type": "pwa-node"
+            "type": "node"
         },
         {
             "type": "chrome",
