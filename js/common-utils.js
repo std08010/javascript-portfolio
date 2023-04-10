@@ -72,7 +72,7 @@ function removeElementFromList(elListItem) {
 /*
  * add an event listener with IE fallback
  */
-function addEventListener(element, actionName, functionToRun) {
+function addCustomEventListener(element, actionName, functionToRun) {
   if (element.addEventListener) {
     // If event listener supported
     element.addEventListener(actionName, functionToRun, false);
