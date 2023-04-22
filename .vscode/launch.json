@@ -16,7 +16,7 @@
         },
         {
             "name": "NodeJS Launch (home)",
-            "program": "${workspaceFolder}/js/hello.js",
+            "program": "${workspaceFolder}/concepts/asynchronous.js",
             "runtimeExecutable": "E:/nodejs/node",
             "request": "launch",
             "skipFiles": [
