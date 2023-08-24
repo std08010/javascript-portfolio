@@ -12,5 +12,5 @@ for (var i = 0; i < string.length; i++) {
 console.log(urlFriendlyImp);
 
 //Declarative
-const urlFriendlyDecl = string.replace(/ /g, "-");
+const urlFriendlyDecl = string.replaceAll(" ", "-");
 console.log(urlFriendlyDecl);
