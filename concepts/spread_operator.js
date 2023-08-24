@@ -1,20 +1,6 @@
-//combine two arrays
 const letters = ["A", "B", "C"];
 const numbers = [1, 2, 3];
 const comb = [...letters, ...numbers];
-
-console.log(comb.join(","));
-
-//get last object from array
-
-// mutates the original array
-//const [last] = letters.reverse();
-
-//doesn't mutate the original array
-const [last] = [...letters].reverse();
-
-console.log(last);
-console.log(letters.join(","));
 
 //split the array in  first element and other elements
 const [first, ...others] = letters;

@@ -3,7 +3,9 @@ const log = (message) => {
 };
 log("In JavaScript, functions are variables");
 
-//They can be added to objects like variables
+/**
+ * They can be added to objects like variables
+ */
 const obj = {
   message: "They can be added to objects like variables",
   log(message) {
@@ -12,7 +14,9 @@ const obj = {
 };
 obj.log(obj.message);
 
-//They can be inserted into arrays like variables
+/**
+ * They can be inserted into arrays like variables
+ */
 const messages = [
   "They can be inserted into arrays",
   (message) => console.log(message),
@@ -22,13 +26,17 @@ const messages = [
 messages[1](messages[0]);
 messages[3](messages[2]);
 
-// They can be sent to other functions as arguments
+/**
+ * They can be sent to other functions as arguments
+ */
 const insideFn = (loggerFn) => {
   loggerFn("They can be sent to other functions as arguments");
 };
 insideFn((message) => console.log(message));
 
-//They can also be returned from other functions, just like variables
+/**
+ * They can also be returned from other functions, just like variables
+ */
 const createScream = function (logger) {
   return function (message) {
     logger(message.toUpperCase() + "!!!");
