@@ -1,4 +1,22 @@
 {
+  "name": "javascript-portfolio",
+  "version": "1.0.0",
+  "description": "My portfolio on general Javascript",
+  "main": "hello.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/std08010/javascript-portfolio.git"
+  },
+  "keywords": [],
+  "author": "Altin Cipi <haris.tsipis@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/std08010/javascript-portfolio/issues"
+  },
+  "homepage": "https://github.com/std08010/javascript-portfolio#readme",
   "dependencies": {
     "axios": "^1.3.6"
   }
